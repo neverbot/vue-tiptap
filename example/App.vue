@@ -9,8 +9,12 @@
 import Editor from '@/Editor.vue'
 
 export default {
+  name: 'App',
   components: {
     Editor
+  },
+  created() {
+    document.title = 'vue-tiptap example'
   }
 }
 </script>
