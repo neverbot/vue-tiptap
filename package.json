@@ -12,7 +12,11 @@
     "type": "git",
     "url": "https://github.com/neverbot/vue-tiptap"
   },
-  "keywords": [],
+  "keywords": [
+    "vue",
+    "tiptap",
+    "vuejs"
+  ],
   "bugs": {
     "url": "https://github.com/neverbot/vue-tiptap/issues"
   },
