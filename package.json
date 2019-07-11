@@ -13,10 +13,17 @@
   "bugs": {
     "url": "https://github.com/neverbot/vue-tiptap/issues"
   },
-  "peerDependencies": {
-    "vue": "^2.5.2"
+  "dependencies": {
+    "tiptap": "^1.23.1",
+    "tiptap-extensions": "^1.24.1",
+    "vue": "^2.6.0"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "@vue/cli-service": "^3.8.0",
+    "node-sass": "^4.12.0",
+    "sass-loader": "^7.1.0",
+    "vue-template-compiler": "^2.6.10"
+  },
   "engines": {
     "node": ">= 10.16.0",
     "npm": ">= 6.10.0"
