@@ -1,15 +1,17 @@
 <template>
-  <section id="app">
-    <img class="logo" height="100" src="../src/assets/logo.png" />
+  <div id="app">
+    <h1>vue-tiptap example</h1>
     <editor />
-  </section>
+  </div>
 </template>
 
 <script>
 import Editor from '@/Editor.vue'
 
 export default {
-  name: 'Editor'
+  components: {
+    Editor
+  }
 }
 </script>
 

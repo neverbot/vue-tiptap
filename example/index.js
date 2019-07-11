@@ -1,11 +1,10 @@
-import Vue from 'vue/dist/vue.esm'
+import Vue from 'vue'
 import App from './App'
-import YourComponent from '../src/index'
-
-Vue.component('YourComponent', YourComponent)
 
 /* eslint-disable no-new */
 new Vue({
   el: '#app',
+  template: '<App/>',
+  components: { App },
   render: h => h(App)
 })
