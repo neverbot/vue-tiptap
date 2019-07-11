@@ -1,0 +1,24 @@
+{
+  "name": "vue-tiptap",
+  "version": "1.0.0",
+  "author": "neverbot",
+  "license": "MIT",
+  "description": "Vue component to use TipTap Editor without being renderless",
+  "scripts": {},
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/neverbot/vue-tiptap"
+  },
+  "keywords": [],
+  "bugs": {
+    "url": "https://github.com/neverbot/vue-tiptap/issues"
+  },
+  "peerDependencies": {
+    "vue": "^2.5.2"
+  },
+  "devDependencies": {},
+  "engines": {
+    "node": ">= 10.16.0",
+    "npm": ">= 6.10.0"
+  }
+}
