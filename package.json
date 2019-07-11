@@ -4,7 +4,10 @@
   "author": "neverbot",
   "license": "MIT",
   "description": "Vue component to use TipTap Editor without being renderless",
-  "scripts": {},
+  "scripts": {
+    "serve": "vue-cli-service serve example/index.js",
+    "build": "vue-cli-service build example/index.js"
+  },
   "repository": {
     "type": "git",
     "url": "https://github.com/neverbot/vue-tiptap"

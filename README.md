@@ -9,17 +9,14 @@ Example component to use tiptap as a Vue component without being completely rend
 # install dependencies
 yarn
 
-# develop
-npm run dev
-
 # build component
-npm run build
+yarn build
 
-# build demo
-npm run build:demo
-
+# serve demo
+yarn serve
 ```
 
 ## License
 
 The MIT License (MIT). Please see [License File](LICENSE.md) for more information.
+SVG Icons from the original [TipTap](https://github.com/scrumpy/tiptap/) package.
