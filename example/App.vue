@@ -32,12 +32,8 @@ export default {
     'WenQuanYi Zen Hei', 'ST Heiti', SimHei, 'WenQuanYi Zen Hei Sharp', sans-serif;
 }
 
-.component-name {
-  flex-grow: 1;
-  display: flex;
+.editor {
   align-items: center;
-  font-size: 30px;
-  font-weight: bold;
   color: #333;
 }
 </style>
