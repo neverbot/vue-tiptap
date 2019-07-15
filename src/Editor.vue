@@ -148,8 +148,17 @@ export default {
     EditorMenuBar,
     Icon
   },
+  props: {
+    initialContent: {
+      type: String,
+      required: true,
+      default: '<em>editable text</em>'
+    }
+  },
   data() {
     return {
+      html: '',
+      json: '',
       editor: new Editor({
         extensions: [
           new Blockquote(),
@@ -170,33 +179,23 @@ export default {
           new Underline(),
           new History()
         ],
-        content: `
-          <h2>
-            Hi there,
-          </h2>
-          <p>
-            this is a very <em>basic</em> example of tiptap.
-          </p>
-          <pre><code>body { display: none; }</code></pre>
-          <ul>
-            <li>
-              A regular list
-            </li>
-            <li>
-              With regular items
-            </li>
-          </ul>
-          <blockquote>
-            It's amazing 👏
-            <br />
-            – mom
-          </blockquote>
-        `
+        content: this.initialContent
       })
     }
   },
   beforeDestroy() {
     this.editor.destroy()
+  },
+
+  created() {
+    this.html = this.editor.getHTML()
+    this.json = this.editor.getJSON()
+
+    this.editor.on('update', () => {
+      this.html = this.editor.getHTML()
+      this.json = this.editor.getJSON()
+      this.$emit('update', this.html)
+    })
   }
 }
 </script>

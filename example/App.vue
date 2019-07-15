@@ -1,7 +1,30 @@
 <template>
   <div id="app">
     <h1>vue-tiptap example</h1>
-    <editor />
+    <editor
+      @update="test"
+      initialContent="
+          <h2>
+            Hi there,
+          </h2>
+          <p>
+            this is a very <em>basic</em> example of tiptap.
+          </p>
+          <pre><code>body { display: none; }</code></pre>
+          <ul>
+            <li>
+              A regular list
+            </li>
+            <li>
+              With regular items
+            </li>
+          </ul>
+          <blockquote>
+            It's amazing 👏
+            <br />
+            – mom
+          </blockquote>"
+    />
   </div>
 </template>
 
@@ -15,6 +38,11 @@ export default {
   },
   created() {
     document.title = 'vue-tiptap example'
+  },
+  methods: {
+    test(something) {
+      console.log(something)
+    }
   }
 }
 </script>
