@@ -1,5 +1,8 @@
 # vue-tiptap
 
+![downloads](https://img.shields.io/npm/dt/vue-tiptap.svg)
+![weekly](https://img.shields.io/npm/dw/vue-tiptap.svg)
+
 Example of using tiptap as a Vue component without being completely renderless, so you can see how to use it inside your own components or even use it right away.
 
 ![screenshot](./img/screenshot.png)
