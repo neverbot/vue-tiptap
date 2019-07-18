@@ -41,3 +41,8 @@ Nothing planned
 ### Added
 
 - Initial commit.
+
+[0.1.3]: https://github.com/neverbot/vue-tiptap/releases/tag/0.1.3
+[0.1.2]: https://github.com/neverbot/vue-tiptap/releases/tag/0.1.2
+[0.1.1]: https://github.com/neverbot/vue-tiptap/releases/tag/0.1.1
+[0.1.0]: https://github.com/neverbot/vue-tiptap/releases/tag/0.1.0
