@@ -9,6 +9,12 @@ and this project tries to adhere to [Semantic Versioning](https://semver.org/spe
 
 Nothing planned
 
+## [0.1.4] - 2019-07-19
+
+### Changed
+
+- Minor changes with readme files.
+
 ## [0.1.3] - 2019-07-19
 
 ### Added
@@ -42,6 +48,7 @@ Nothing planned
 
 - Initial commit.
 
+[0.1.4]: https://github.com/neverbot/vue-tiptap/releases/tag/0.1.4
 [0.1.3]: https://github.com/neverbot/vue-tiptap/releases/tag/0.1.3
 [0.1.2]: https://github.com/neverbot/vue-tiptap/releases/tag/0.1.2
 [0.1.1]: https://github.com/neverbot/vue-tiptap/releases/tag/0.1.1
