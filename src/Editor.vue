@@ -2,13 +2,15 @@
   <div class="editor">
     <editor-menu-bar :editor="editor" v-slot="{ commands, isActive }">
       <div class="menubar">
-        <button
-          class="menubar__button"
-          :class="{ 'is-active': isActive.bold() }"
-          @click="commands.bold"
-        >
-          <icon name="bold" />
-        </button>
+        <span v-for="actionName in activeButtons" :key="actionName">
+          <button
+            class="menubar__button"
+            :class="{ 'is-active': isActive[actionName]() }"
+            @click="`commands.${actionName}`"
+          >
+            <icon :name="`${actionName}`" />
+          </button>
+        </span>
 
         <button
           class="menubar__button"
@@ -148,13 +150,51 @@ export default {
     EditorMenuBar,
     Icon
   },
+  // computed: {
+  //   buttons: this.activeButtons
+  // },
   props: {
     initialContent: {
       type: String,
       required: true,
       default: '<em>editable text</em>'
+    },
+    activeButtons: {
+      type: Array,
+      validator: function(list) {
+        for (let el of list) {
+          console.log(el)
+          // The value must match one of these strings
+          if (
+            [
+              'blockquote',
+              'bullet_list',
+              'code_block',
+              'hard_break',
+              'heading',
+              'horizontal_rule',
+              'list_item',
+              'ordered_list',
+              'todo_item',
+              'todo_list',
+              'link',
+              'bold',
+              'code',
+              'italic',
+              'strike',
+              'underline',
+              'history'
+            ].indexOf(el) === -1
+          ) {
+            return -1
+          }
+        }
+        return 1
+      },
+      default: ['bold', 'italic']
     }
   },
+
   data() {
     return {
       html: '',
@@ -183,6 +223,7 @@ export default {
       })
     }
   },
+
   beforeDestroy() {
     this.editor.destroy()
   },

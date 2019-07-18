@@ -24,6 +24,7 @@
             <br />
             – mom
           </blockquote>"
+      v-bind:activeButtons="['bold', 'italic']"
     />
   </div>
 </template>
