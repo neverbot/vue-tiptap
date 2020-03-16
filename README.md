@@ -14,13 +14,13 @@ Example of using tiptap as a Vue component without being completely renderless, 
 ```bash
 
 # install dependencies
-yarn
+npm install
 
 # build component
-yarn build
+npm build
 
 # serve demo
-yarn serve
+npm serve
 ```
 
 ## License
