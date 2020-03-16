@@ -21,15 +21,15 @@
     "url": "https://github.com/neverbot/vue-tiptap/issues"
   },
   "dependencies": {
-    "tiptap": "^1.23.1",
-    "tiptap-extensions": "^1.24.1",
-    "vue": "^2.6.0"
+    "tiptap": "^1.26.6",
+    "tiptap-extensions": "^1.28.6",
+    "vue": "^2.6.11"
   },
   "devDependencies": {
-    "@vue/cli-service": "^3.8.0",
-    "node-sass": "^4.12.0",
-    "sass-loader": "^7.1.0",
-    "vue-template-compiler": "^2.6.10"
+    "@vue/cli-service": "^3.12.1",
+    "node-sass": "^4.13.1",
+    "sass-loader": "^7.3.1",
+    "vue-template-compiler": "^2.6.11"
   },
   "engines": {
     "node": ">= 10.16.0",
