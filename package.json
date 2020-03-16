@@ -6,7 +6,9 @@
   "description": "Vue component to use TipTap Editor without being renderless",
   "scripts": {
     "serve": "vue-cli-service serve example/index.js",
-    "build": "vue-cli-service build example/index.js"
+    "build": "vue-cli-service build example/index.js",
+    "lint": "./node_modules/eslint/bin/eslint.js . --ext .js,.json,.vue",
+    "lint:fix": "./node_modules/eslint/bin/eslint.js . --ext .js,.json,.vue --fix"    
   },
   "repository": {
     "type": "git",

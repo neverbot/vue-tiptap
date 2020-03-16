@@ -1,3 +1,6 @@
 !.*.json
 package.json
 package-lock.json
+
+# Ignore dist/ files
+dist/*
