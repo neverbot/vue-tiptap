@@ -3,12 +3,7 @@
     <editor-menu-bar :editor="editor" v-slot="{ commands, isActive }">
       <div class="menubar">
         <span v-for="actionName in activeButtons" :key="actionName">
-          <button
-            v-if="actionName === 'bold'"
-            class="menubar__button"
-            :class="{ 'is-active': isActive.bold() }"
-            @click="commands.bold"
-          >
+          <button v-if="actionName === 'bold'" class="menubar__button" :class="{ 'is-active': isActive.bold() }" @click="commands.bold">
             <icon name="bold" />
           </button>
           <button
@@ -38,12 +33,7 @@
             <icon name="underline" />
           </button>
 
-          <button
-            v-if="actionName === 'code'"
-            class="menubar__button"
-            :class="{ 'is-active': isActive.code() }"
-            @click="commands.code"
-          >
+          <button v-if="actionName === 'code'" class="menubar__button" :class="{ 'is-active': isActive.code() }" @click="commands.code">
             <icon name="code" />
           </button>
 
@@ -61,21 +51,27 @@
             class="menubar__button"
             :class="{ 'is-active': isActive.heading({ level: 1 }) }"
             @click="commands.heading({ level: 1 })"
-          >H1</button>
+          >
+            H1
+          </button>
 
           <button
             v-if="actionName === 'h2'"
             class="menubar__button"
             :class="{ 'is-active': isActive.heading({ level: 2 }) }"
             @click="commands.heading({ level: 2 })"
-          >H2</button>
+          >
+            H2
+          </button>
 
           <button
             v-if="actionName === 'h3'"
             class="menubar__button"
             :class="{ 'is-active': isActive.heading({ level: 3 }) }"
             @click="commands.heading({ level: 3 })"
-          >H3</button>
+          >
+            H3
+          </button>
 
           <button
             v-if="actionName === 'bullet_list'"
@@ -113,11 +109,7 @@
             <icon name="code" />
           </button>
 
-          <button
-            v-if="actionName === 'horizontal_rule'"
-            class="menubar__button"
-            @click="commands.horizontal_rule"
-          >
+          <button v-if="actionName === 'horizontal_rule'" class="menubar__button" @click="commands.horizontal_rule">
             <icon name="hr" />
           </button>
 
@@ -202,7 +194,7 @@ export default {
         }
         return 1
       },
-      default: ['bold', 'italic']
+      default: () => ['bold', 'italic']
     }
   },
   data() {
@@ -249,5 +241,4 @@ export default {
 }
 </script>
 
-<style lang="css" scoped>
-</style>
+<style lang="css" scoped></style>

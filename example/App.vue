@@ -24,10 +24,24 @@
             <br />
             – mom
           </blockquote>"
-      v-bind:activeButtons="['bold','italic','strike','underline',
-        'code','paragraph','h1','h2','h3','bullet_list',
-        'ordered_list','blockquote','code_block',
-        'horizontal_rule','undo','redo']"
+      v-bind:activeButtons="[
+        'bold',
+        'italic',
+        'strike',
+        'underline',
+        'code',
+        'paragraph',
+        'h1',
+        'h2',
+        'h3',
+        'bullet_list',
+        'ordered_list',
+        'blockquote',
+        'code_block',
+        'horizontal_rule',
+        'undo',
+        'redo'
+      ]"
     />
   </div>
 </template>
@@ -45,6 +59,7 @@ export default {
   },
   methods: {
     test(something) {
+      // eslint-disable-next-line no-console
       console.log(something)
     }
   }
