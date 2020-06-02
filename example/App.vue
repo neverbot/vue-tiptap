@@ -40,7 +40,7 @@
         'code_block',
         'horizontal_rule',
         'undo',
-        'redo'
+        'redo',
       ]"
     />
   </div>
@@ -52,7 +52,7 @@ import Editor from '@/Editor.vue'
 export default {
   name: 'App',
   components: {
-    Editor
+    Editor,
   },
   created() {
     document.title = 'vue-tiptap example'
@@ -61,8 +61,8 @@ export default {
     test(something) {
       // eslint-disable-next-line no-console
       console.log(something)
-    }
-  }
+    },
+  },
 }
 </script>
 

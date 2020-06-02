@@ -162,7 +162,7 @@ import {
   Link,
   Strike,
   Underline,
-  History
+  History,
 } from 'tiptap-extensions'
 
 export default {
@@ -170,17 +170,17 @@ export default {
   components: {
     EditorContent,
     EditorMenuBar,
-    Icon
+    Icon,
   },
   props: {
     initialContent: {
       type: String,
       required: true,
-      default: '<em>editable text</em>'
+      default: '<em>editable text</em>',
     },
     activeButtons: {
       type: Array,
-      validator: function(list) {
+      validator: function (list) {
         for (let el of list) {
           // The value must match one of these strings
           if (
@@ -200,7 +200,7 @@ export default {
               'code_block',
               'horizontal_rule',
               'undo',
-              'redo'
+              'redo',
             ].indexOf(el) === -1
           ) {
             return -1
@@ -208,8 +208,8 @@ export default {
         }
         return 1
       },
-      default: () => ['bold', 'italic']
-    }
+      default: () => ['bold', 'italic'],
+    },
   },
   data() {
     return {
@@ -233,10 +233,10 @@ export default {
           new Italic(),
           new Strike(),
           new Underline(),
-          new History()
+          new History(),
         ],
-        content: this.initialContent
-      })
+        content: this.initialContent,
+      }),
     }
   },
   beforeDestroy() {
@@ -251,7 +251,7 @@ export default {
       this.json = this.editor.getJSON()
       this.$emit('update', this.html)
     })
-  }
+  },
 }
 </script>
 
