@@ -3,7 +3,12 @@
     <editor-menu-bar :editor="editor" v-slot="{ commands, isActive }">
       <div class="menubar">
         <span v-for="actionName in activeButtons" :key="actionName">
-          <button v-if="actionName === 'bold'" class="menubar__button" :class="{ 'is-active': isActive.bold() }" @click="commands.bold">
+          <button
+            v-if="actionName === 'bold'"
+            class="menubar__button"
+            :class="{ 'is-active': isActive.bold() }"
+            @click="commands.bold"
+          >
             <icon name="bold" />
           </button>
           <button
@@ -33,7 +38,12 @@
             <icon name="underline" />
           </button>
 
-          <button v-if="actionName === 'code'" class="menubar__button" :class="{ 'is-active': isActive.code() }" @click="commands.code">
+          <button
+            v-if="actionName === 'code'"
+            class="menubar__button"
+            :class="{ 'is-active': isActive.code() }"
+            @click="commands.code"
+          >
             <icon name="code" />
           </button>
 
@@ -109,7 +119,11 @@
             <icon name="code" />
           </button>
 
-          <button v-if="actionName === 'horizontal_rule'" class="menubar__button" @click="commands.horizontal_rule">
+          <button
+            v-if="actionName === 'horizontal_rule'"
+            class="menubar__button"
+            @click="commands.horizontal_rule"
+          >
             <icon name="hr" />
           </button>
 
