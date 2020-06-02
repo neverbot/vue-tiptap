@@ -5,10 +5,7 @@
     "node": true,
     "browser": true
   },
-  "globals": {
-    "expect": true,
-    "app": true
-  },
+  "globals": {},
   "plugins": [
     "prettier"
   ],
@@ -23,7 +20,7 @@
         "usePrettierrc": true
       }
     ],
-    "no-console": 1,
+    "no-console": "warn",
     "no-debugger": 1,
     "require-atomic-updates": 0
   },
@@ -80,6 +77,7 @@
       "extends": [
         "eslint:recommended",
         "plugin:vue/essential",
+        "plugin:vue/strongly-recommended",
         "@vue/prettier"
       ],
       "rules": {
