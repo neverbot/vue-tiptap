@@ -2,7 +2,6 @@
   <div id="app">
     <h1>vue-tiptap example</h1>
     <editor
-      @update="test"
       initial-content="
           <h2>
             Hi there,
@@ -42,6 +41,7 @@
         'undo',
         'redo',
       ]"
+      @update="test"
     />
   </div>
 </template>

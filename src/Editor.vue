@@ -1,6 +1,6 @@
 <template>
   <div class="editor">
-    <editor-menu-bar :editor="editor" v-slot="{ commands, isActive }">
+    <editor-menu-bar v-slot="{ commands, isActive }" :editor="editor">
       <div class="menubar">
         <span v-for="actionName in activeButtons" :key="actionName">
           <button
