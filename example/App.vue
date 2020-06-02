@@ -3,7 +3,7 @@
     <h1>vue-tiptap example</h1>
     <editor
       @update="test"
-      initialContent="
+      initial-content="
           <h2>
             Hi there,
           </h2>
@@ -24,7 +24,7 @@
             <br />
             – mom
           </blockquote>"
-      v-bind:activeButtons="[
+      :active-buttons="[
         'bold',
         'italic',
         'strike',
