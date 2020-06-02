@@ -66,10 +66,13 @@ export default {
 }
 </script>
 
+<style lang="sass">
+@import '../src/sass/main.scss'
+</style>
+
 <style lang="scss">
 #app {
   display: flex;
-  height: 100vh;
   padding-top: 100px;
   box-sizing: border-box;
   flex-flow: column;
@@ -78,10 +81,5 @@ export default {
     'Liberation Sans', 'PingFang SC', 'Hiragino Sans GB', 'Noto Sans CJK SC', 'Source Han Sans SC',
     'Source Han Sans CN', 'Microsoft YaHei', 'Wenquanyi Micro Hei', 'WenQuanYi Zen Hei', 'ST Heiti',
     SimHei, 'WenQuanYi Zen Hei Sharp', sans-serif;
-}
-
-.editor {
-  align-items: center;
-  color: #333;
 }
 </style>
