@@ -2,6 +2,7 @@
 package.json
 package-lock.json
 *.md
+*.scss
 
 # Ignore dist/ files
 dist/*
