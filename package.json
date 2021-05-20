@@ -23,23 +23,23 @@
     "url": "https://github.com/neverbot/vue-tiptap/issues"
   },
   "dependencies": {
-    "tiptap": "^1.32.1",
-    "tiptap-extensions": "^1.35.1",
+    "tiptap": "^1.32.2",
+    "tiptap-extensions": "^1.35.2",
     "vue": "^2.6.12"
   },
   "devDependencies": {
-    "@vue/cli-service": "^4.5.12",
+    "@vue/cli-service": "^4.5.13",
     "@vue/eslint-config-prettier": "^6.0.0",
     "babel-eslint": "^10.1.0",
-    "eslint": "^7.22.0",
-    "eslint-config-prettier": "^8.1.0",
+    "eslint": "^7.26.0",
+    "eslint-config-prettier": "^8.3.0",
     "eslint-plugin-html": "^6.1.2",
     "eslint-plugin-json-format": "^2.0.1",
-    "eslint-plugin-prettier": "^3.3.1",
-    "eslint-plugin-vue": "^7.7.0",
-    "node-sass": "^5.0.0",
-    "prettier": "^2.2.1",
-    "sass-loader": "^11.0.1",
+    "eslint-plugin-prettier": "^3.4.0",
+    "eslint-plugin-vue": "^7.9.0",
+    "node-sass": "^6.0.0",
+    "prettier": "^2.3.0",
+    "sass-loader": "^11.1.1",
     "vue-template-compiler": "^2.6.12"
   },
   "engines": {
