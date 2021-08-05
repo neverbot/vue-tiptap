@@ -33,13 +33,13 @@
         'h1',
         'h2',
         'h3',
-        'bullet_list',
-        'ordered_list',
+        'bulletList',
+        'orderedList',
         'blockquote',
-        'code_block',
-        'horizontal_rule',
+        'codeBlock',
+        'horizontalRule',
         'undo',
-        'redo',
+        'redo'
       ]"
       @update="test"
     />
@@ -47,39 +47,41 @@
 </template>
 
 <script>
-import Editor from '@/Editor.vue'
+import Editor from '@/components/Editor.vue';
 
 export default {
   name: 'App',
   components: {
-    Editor,
+    Editor
   },
   created() {
-    document.title = 'vue-tiptap example'
+    document.title = 'vue-tiptap example';
   },
   methods: {
     test(something) {
       // eslint-disable-next-line no-console
-      console.log(something)
-    },
-  },
-}
+      console.log(something);
+    }
+  }
+};
 </script>
 
 <style lang="sass">
 @import '../src/sass/main.scss'
 </style>
 
-<style lang="scss">
+<style lang="css">
 #app {
   display: flex;
   padding-top: 100px;
   box-sizing: border-box;
   flex-flow: column;
   align-items: center;
-  font-family: -apple-system, 'Noto Sans', 'Helvetica Neue', Helvetica, 'Nimbus Sans L', Arial,
-    'Liberation Sans', 'PingFang SC', 'Hiragino Sans GB', 'Noto Sans CJK SC', 'Source Han Sans SC',
-    'Source Han Sans CN', 'Microsoft YaHei', 'Wenquanyi Micro Hei', 'WenQuanYi Zen Hei', 'ST Heiti',
-    SimHei, 'WenQuanYi Zen Hei Sharp', sans-serif;
+  font-family: -apple-system, 'Noto Sans', 'Helvetica Neue', Helvetica,
+    'Nimbus Sans L', Arial, 'Liberation Sans', 'PingFang SC',
+    'Hiragino Sans GB', 'Noto Sans CJK SC', 'Source Han Sans SC',
+    'Source Han Sans CN', 'Microsoft YaHei', 'Wenquanyi Micro Hei',
+    'WenQuanYi Zen Hei', 'ST Heiti', SimHei, 'WenQuanYi Zen Hei Sharp',
+    sans-serif;
 }
 </style>
