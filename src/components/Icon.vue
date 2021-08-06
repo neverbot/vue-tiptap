@@ -1,6 +1,9 @@
 <template>
-  <div class="icon" :class="[`icon--${name}`, `icon--${size}`, { 'has-align-fix': fixAlign }]">
-    <img :src="require(`./assets/icons/${name}.svg`)" :alt="`${name}`" />
+  <div
+    class="icon"
+    :class="[`icon--${name}`, `icon--${size}`, { 'has-align-fix': fixAlign }]"
+  >
+    <img :src="require(`../assets/icons/${name}.svg`)" :alt="`${name}`" />
   </div>
 </template>
 
@@ -9,23 +12,23 @@ export default {
   props: {
     name: {
       type: String,
-      default: '',
+      default: ''
     },
     size: {
       type: String,
-      default: 'normal',
+      default: 'normal'
     },
     modifier: {
       type: Object,
-      default: null,
+      default: null
     },
     fixAlign: {
       type: Boolean,
-      default: false,
-    },
-  },
+      default: false
+    }
+  }
   // created: function() {}
-}
+};
 </script>
 
 <style lang="scss" scoped></style>
