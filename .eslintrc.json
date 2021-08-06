@@ -29,10 +29,15 @@
       "files": [
         "**/*.js"
       ],
-      "parser": "babel-eslint",
+      "parser": "@babel/eslint-parser",
       "parserOptions": {
+        "requireConfigFile": false,
         "ecmaVersion": 2018,
-        "sourceType": "module"
+        "sourceType": "module",
+        "allowImportExportEverywhere": true,
+        "ecmaFeatures": {
+          "experimentalObjectRestSpread": true
+        }
       },
       "plugins": [],
       "extends": [
@@ -64,22 +69,17 @@
       "files": [
         "**/*.vue"
       ],
-      "parser": "vue-eslint-parser",
-      "parserOptions": {
-        "ecmaVersion": 2018,
-        "ecmaFeatures": {
-          "experimentalObjectRestSpread": true
-        }
-      },
       "plugins": [
         "vue"
       ],
+      "parser": "vue-eslint-parser",
       "extends": [
         "eslint:recommended",
-        "plugin:vue/essential",
-        "plugin:vue/strongly-recommended",
-        "plugin:vue/recommended",
-        "@vue/prettier"
+        "plugin:vue/base",
+        "plugin:vue/vue3-essential",
+        "plugin:vue/vue3-recommended",
+        "plugin:vue/vue3-strongly-recommended",
+        "prettier"
       ],
       "rules": {
         "vue/no-unused-components": "warn",
