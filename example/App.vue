@@ -29,7 +29,6 @@
         'strike',
         'underline',
         'code',
-        'paragraph',
         'h1',
         'h2',
         'h3',
