@@ -12,21 +12,21 @@ export default {
   props: {
     name: {
       type: String,
-      default: ''
+      default: '',
     },
     size: {
       type: String,
-      default: 'normal'
+      default: 'normal',
     },
     modifier: {
       type: Object,
-      default: null
+      default: null,
     },
     fixAlign: {
       type: Boolean,
-      default: false
-    }
-  }
+      default: false,
+    },
+  },
   // created: function() {}
 };
 </script>
