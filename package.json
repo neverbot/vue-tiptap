@@ -27,16 +27,16 @@
     "@tiptap/starter-kit": "^2.0.0-beta.183",
     "@tiptap/vue-3": "^2.0.0-beta.90",
     "core-js": "^3.21.1",
-    "vue": "^3.0.0"
+    "vue": "^3.2.31"
   },
   "devDependencies": {
     "@babel/core": "^7.17.8",
     "@babel/eslint-parser": "^7.17.0",
     "@babel/preset-env": "^7.16.11",
-    "@vue/babel-preset-app": "^4.5.15",
-    "@vue/cli-plugin-babel": "^4.5.15",
-    "@vue/cli-service": "^4.5.15",
-    "@vue/compiler-sfc": "^3.2.29",
+    "@vue/babel-preset-app": "^5.0.4",
+    "@vue/cli-plugin-babel": "^5.0.4",
+    "@vue/cli-service": "^5.0.4",
+    "@vue/compiler-sfc": "^3.2.31",
     "babel-loader": "^8.2.4",
     "eslint": "^8.11.0",
     "eslint-config-prettier": "^8.5.0",
@@ -44,10 +44,10 @@
     "eslint-plugin-prettier": "^4.0.0",
     "eslint-plugin-vue": "^8.5.0",
     "prettier": "^2.6.0",
-    "sass": "^1.49.4",
-    "sass-loader": "^10",
-    "vue-eslint-parser": "^8.2.0",
-    "webpack": "^4.46.0"
+    "sass": "^1.49.9",
+    "sass-loader": "^12",
+    "vue-eslint-parser": "^8.3.0",
+    "webpack": "^5.70.0"
   },
   "engines": {
     "node": "^14.17.0 || ^16.13.0",
