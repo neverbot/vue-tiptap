@@ -83,7 +83,8 @@
       ],
       "rules": {
         "vue/no-unused-components": "warn",
-        "vue/require-valid-default-prop": "warn"
+        "vue/require-valid-default-prop": "warn",
+        "vue/multi-word-component-names": "warn"
       }
     }
   ]
