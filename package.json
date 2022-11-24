@@ -8,7 +8,8 @@
     "serve": "vue-cli-service serve example/main.js",
     "build": "vue-cli-service build example/main.js",
     "lint": "npx eslint . --ext js,json,vue",
-    "lint:fix": "npx eslint . --ext js,json,vue --fix"
+    "lint:fix": "npx eslint . --ext js,json,vue --fix",
+    "test": "echo \"Error: no tests\" && exit 1"    
   },
   "repository": {
     "type": "git",
