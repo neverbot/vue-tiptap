@@ -46,12 +46,12 @@
     "eslint-plugin-vue": "^9.8.0",
     "prettier": "^2.8.0",
     "sass": "^1.56.1",
-    "sass-loader": "^13",
+    "sass-loader": "^13.2.0",
     "vue-eslint-parser": "^9.1.0",
     "webpack": "^5.75.0"
   },
   "engines": {
-    "node": "^14.17.0 || ^16.13.0",
+    "node": "^14.17.0 || ^16.13.0 || ^v18.9.0",
     "npm": "^7.14.0 || ^8.1.2"
   }
 }
