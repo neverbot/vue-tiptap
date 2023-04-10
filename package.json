@@ -1,6 +1,6 @@
 {
   "name": "vue-tiptap",
-  "version": "2.2.9",
+  "version": "2.2.10",
   "author": "neverbot <ivan@neverbot.com> (http://neverbot.com)",
   "license": "MIT",
   "description": "Vue component to use TipTap Editor without being renderless",
