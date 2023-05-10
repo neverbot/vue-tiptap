@@ -1,6 +1,6 @@
 {
   "name": "vue-tiptap",
-  "version": "2.2.10",
+  "version": "2.2.11",
   "author": "neverbot <ivan@neverbot.com> (http://neverbot.com)",
   "license": "MIT",
   "description": "Vue component to use TipTap Editor without being renderless",
@@ -9,7 +9,7 @@
     "build": "vue-cli-service build example/main.js",
     "lint": "npx eslint . --ext js,json,vue",
     "lint:fix": "npx eslint . --ext js,json,vue --fix",
-    "test": "echo \"Error: no tests\" && exit 1"    
+    "test": "echo \"Error: no tests\" && exit 1"
   },
   "repository": {
     "type": "git",
