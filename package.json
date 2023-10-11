@@ -42,10 +42,10 @@
     "eslint": "^8.51.0",
     "eslint-config-prettier": "^9.0.0",
     "eslint-plugin-json-format": "^2.0.1",
-    "eslint-plugin-prettier": "^5.0.0",
+    "eslint-plugin-prettier": "^5.0.1",
     "eslint-plugin-vue": "^9.17.0",
     "prettier": "^3.0.3",
-    "sass": "^1.69.1",
+    "sass": "^1.69.2",
     "sass-loader": "^13.3.2",
     "vue-eslint-parser": "^9.3.2",
     "webpack": "^5.88.2"
