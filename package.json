@@ -24,16 +24,16 @@
     "url": "https://github.com/neverbot/vue-tiptap/issues"
   },
   "dependencies": {
-    "@tiptap/extension-underline": "^2.1.11",
-    "@tiptap/starter-kit": "^2.1.11",
-    "@tiptap/vue-3": "^2.1.11",
+    "@tiptap/extension-underline": "^2.1.12",
+    "@tiptap/starter-kit": "^2.1.12",
+    "@tiptap/vue-3": "^2.1.12",
     "core-js": "^3.33.0",
     "vue": "^3.3.4"
   },
   "devDependencies": {
-    "@babel/core": "^7.23.0",
+    "@babel/core": "^7.23.2",
     "@babel/eslint-parser": "^7.22.15",
-    "@babel/preset-env": "^7.22.20",
+    "@babel/preset-env": "^7.23.2",
     "@vue/babel-preset-app": "^5.0.8",
     "@vue/cli-plugin-babel": "^5.0.8",
     "@vue/cli-service": "^5.0.8",
@@ -45,10 +45,10 @@
     "eslint-plugin-prettier": "^5.0.1",
     "eslint-plugin-vue": "^9.17.0",
     "prettier": "^3.0.3",
-    "sass": "^1.69.2",
+    "sass": "^1.69.4",
     "sass-loader": "^13.3.2",
     "vue-eslint-parser": "^9.3.2",
-    "webpack": "^5.88.2"
+    "webpack": "^5.89.0"
   },
   "engines": {
     "node": "^14.17.0 || ^16.13.0 || ^v18.9.0",
