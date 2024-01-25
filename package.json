@@ -36,7 +36,6 @@
     "@tiptap/extension-underline": "^2.1.16",
     "@tiptap/starter-kit": "^2.1.16",
     "@tiptap/vue-3": "^2.1.16",
-    "core-js": "^3.35.1",
     "vue": "^3.4.15"
   },
   "devDependencies": {
