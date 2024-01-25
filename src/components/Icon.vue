@@ -3,12 +3,18 @@
     class="icon"
     :class="[`icon--${name}`, `icon--${size}`, { 'has-align-fix': fixAlign }]"
   >
-    <img :src="require(`../assets/icons/${name}.svg`)" :alt="`${name}`" />
+    <InlineSvg :name="`${name}`" />
   </div>
 </template>
 
 <script>
+import InlineSvg from './InlineSvg.vue';
+
 export default {
+  // created: function() {}
+  components: {
+    InlineSvg,
+  },
   props: {
     name: {
       type: String,
@@ -27,7 +33,6 @@ export default {
       default: false,
     },
   },
-  // created: function() {}
 };
 </script>
 

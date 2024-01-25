@@ -140,7 +140,7 @@
 </template>
 
 <script>
-import Icon from './Icon';
+import Icon from './Icon.vue';
 import { Editor, EditorContent } from '@tiptap/vue-3';
 import StarterKit from '@tiptap/starter-kit';
 import Underline from '@tiptap/extension-underline';

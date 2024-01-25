@@ -19,10 +19,10 @@ Example of using [tiptap 2](https://github.com/scrumpy/tiptap/) as a Vue 3 compo
 npm install
 
 # build component
-npm build
+npm run build
 
 # serve demo
-npm serve
+npm run dev
 ```
 
 ## License
