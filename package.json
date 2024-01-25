@@ -1,6 +1,6 @@
 {
   "name": "vue-tiptap",
-  "version": "3.0.0",
+  "version": "3.0.1",
   "description": "Vue component to use TipTap Editor without being renderless",
   "keywords": [
     "vue",
