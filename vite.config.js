@@ -12,7 +12,7 @@ export default defineConfig({
   },
   build: {
     lib: {
-      // src/indext.js is where we have exported the component(s)
+      // src/index.js is where we have exported the component(s)
       entry: path.resolve(__dirname, 'src/index.js'),
       name: 'VueTipTap',
       // the name of the output files when the build is run
