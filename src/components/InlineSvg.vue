@@ -10,7 +10,8 @@ export default {
   data() {
     return {
       icons: import.meta.glob(`../assets/icons/*.svg`, {
-        as: 'raw',
+        query: '?raw',
+        import: 'default',
         eager: true,
       }),
     };
