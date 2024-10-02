@@ -84,33 +84,13 @@ export default [
   {
     files: ['**/*.vue'],
     plugins: {
+      prettier,
       vue,
     },
     languageOptions: {
       parser: vueParser,
       ecmaVersion: 'latest',
       sourceType: 'module',
-      // parserOptions: {
-      // extraFileExtensions: ['.vue'],
-      // parser: babelParser,
-      // requireConfigFile: false,
-      // parser: {
-      //   // Script parser for `<script>`
-      //   js: '@babel/eslint-parser',
-      //   javascript: '@babel/eslint-parser',
-      //   '<script>': '@babel/eslint-parser',
-      //   // js: 'espree',
-      //   // javascript: 'espree',
-      //   // '<script>': babelParser,
-      //   // Script parser for `<script lang="ts">`
-      //   // ts: '@typescript-eslint/parser',
-      //   // ts: ts,
-      //   // Script parser for vue directives (e.g. `v-if=` or `:attribute=`)
-      //   // and vue interpolations (e.g. `{{variable}}`).
-      //   // If not specified, the parser determined by `<script lang ="...">` is used.
-      //   '<template>': espree,
-      // },
-      // },
       globals: {
         ...globals.node,
         ...globals.browser,
@@ -118,6 +98,13 @@ export default [
     },
     processor: vue.processors['.vue'],
     rules: {
+      'prettier/prettier': [
+        'error',
+        {},
+        {
+          usePrettierrc: true,
+        },
+      ],
       ...vue.configs.base.rules,
       ...vue.configs.recommended.rules,
       ...vue.configs.essential.rules,
@@ -125,24 +112,35 @@ export default [
       'no-console': 'warn',
       'vue/multi-word-component-names': 'off',
       'vue/no-v-html': 'off',
-      // 'vue/first-attribute-linebreak': [
-      //   'error',
-      //   {
-      //     singleline: 'beside',
-      //     multiline: 'below',
-      //   },
-      // ],
-      // 'vue/html-indent': [
-      //   'error',
-      //   2,
-      //   {
-      //     attribute: 1,
-      //     baseIndent: 1,
-      //     closeBracket: 0,
-      //     alignAttributesVertically: true,
-      //     ignores: [],
-      //   },
-      // ],
+      'vue/first-attribute-linebreak': [
+        'warn',
+        {
+          singleline: 'ignore',
+          multiline: 'below',
+        },
+      ],
+      'vue/max-attributes-per-line': [
+        'error',
+        {
+          singleline: {
+            max: 3,
+          },
+          multiline: {
+            max: 1,
+          },
+        },
+      ],
+      'vue/html-indent': [
+        'error',
+        2,
+        {
+          attribute: 1,
+          baseIndent: 1,
+          closeBracket: 0,
+          alignAttributesVertically: false,
+          ignores: [],
+        },
+      ],
     },
   },
 ];
