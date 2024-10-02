@@ -1,7 +1,10 @@
 <template>
   <div class="editor">
     <div class="menubar">
-      <span v-for="actionName in activeButtons" :key="actionName">
+      <span
+        v-for="actionName in activeButtons"
+        :key="actionName"
+      >
         <button
           v-if="actionName === 'bold'"
           class="menubar__button"
@@ -135,7 +138,10 @@
       </span>
     </div>
 
-    <editor-content class="editor__content" :editor="editor" />
+    <editor-content
+      class="editor__content"
+      :editor="editor"
+    />
   </div>
 </template>
 
