@@ -2,7 +2,6 @@ import globals from 'globals';
 import babelParser from '@babel/eslint-parser';
 import eslintJsonc from 'eslint-plugin-jsonc';
 import eslintJsoncParser from 'jsonc-eslint-parser';
-import html from 'eslint-plugin-html';
 import vueParser from 'vue-eslint-parser';
 import vue from 'eslint-plugin-vue';
 import prettier from 'eslint-plugin-prettier';
@@ -71,12 +70,6 @@ export default [
         },
       ],
       'no-console': 'warn',
-    },
-  },
-  {
-    files: ['**/*.html'],
-    plugins: {
-      html,
     },
   },
   ...vue.configs['flat/essential'],
