@@ -26,11 +26,11 @@
   "main": "./dist/vue-tiptap.umd.cjs",
   "module": "./dist/vue-tiptap.js",
   "scripts": {
-    "build": "npx vite build",
-    "dev": "npx vite",
+    "build": "npx vite build --mode production",
+    "dev": "npx vite build --mode development && npx vite preview --outDir dist-example --port 5173",
     "lint": "npx eslint .",
     "lint:fix": "npx eslint --fix .",
-    "serve": "npx vite preview",
+    "serve": "npm run dev",
     "test": "echo \"Error: no tests\" && exit 1"
   },
   "dependencies": {
@@ -59,7 +59,7 @@
     "vue-eslint-parser": "^9.4.3"
   },
   "engines": {
-    "node": "^14 || ^16 || ^18 || ^20",
+    "node": "^14 || ^16 || ^18 || ^20 || ^22",
     "npm": "^7 || ^8 || ^9 || ^10"
   }
 }
