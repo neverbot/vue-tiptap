@@ -1,7 +1,7 @@
 import globals from 'globals';
 import babelParser from '@babel/eslint-parser';
 import eslintJsonc from 'eslint-plugin-jsonc';
-import eslintJsoncParser from 'jsonc-eslint-parser';
+import * as eslintJsoncParser from 'jsonc-eslint-parser';
 import vueParser from 'vue-eslint-parser';
 import vue from 'eslint-plugin-vue';
 import prettier from 'eslint-plugin-prettier';
@@ -11,7 +11,7 @@ export default [
   {
     // global ignores
     // folders can only be ignored at the global level, per-cfg you must do: '**/dist/**/*'
-    ignores: ['**/dist/'],
+    ignores: ['**/dist/', '**/dist-example/', '**/node_modules/'],
   },
   // general defaults
   js.configs.recommended,
