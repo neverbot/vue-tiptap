@@ -154,7 +154,7 @@ export default {
   props: {
     initialContent: {
       type: String,
-      required: true,
+      required: false,
       default: '<em>editable text</em>',
     },
     activeButtons: {
