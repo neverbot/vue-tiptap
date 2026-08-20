@@ -21,10 +21,18 @@
     ".": {
       "import": "./dist/vue-tiptap.js",
       "require": "./dist/vue-tiptap.umd.cjs"
-    }
+    },
+    "./style": "./src/sass/main.scss",
+    "./src/*": "./src/*",
+    "./package.json": "./package.json"
   },
   "main": "./dist/vue-tiptap.umd.cjs",
   "module": "./dist/vue-tiptap.js",
+  "files": [
+    "dist",
+    "src",
+    "img"
+  ],
   "scripts": {
     "build": "npx vite build --mode production",
     "dev": "npx vite build --mode development && npx vite preview --outDir dist-example --port 5173",
