@@ -1,6 +1,7 @@
 import { describe, it, expect, vi } from 'vitest';
 import { mount, flushPromises } from '@vue/test-utils';
 import Editor from '@/components/Editor.vue';
+import { actionNames } from '@/actions.js';
 
 // The toolbar renders one <button> per entry in activeButtons, so counting
 // and reading them is the cheapest way to assert what was rendered.
@@ -209,6 +210,28 @@ describe('activeButtons validator', () => {
     ];
 
     expect(validator(all)).toBe(true);
+  });
+
+  // Guards the single source of truth against accidental edits: the list
+  // above is the documented contract, actionNames is what the code uses.
+  it('exports exactly the documented actions, in order', () => {
+    expect(actionNames).toEqual([
+      'bold',
+      'italic',
+      'strike',
+      'underline',
+      'code',
+      'h1',
+      'h2',
+      'h3',
+      'bulletList',
+      'orderedList',
+      'blockquote',
+      'codeBlock',
+      'horizontalRule',
+      'undo',
+      'redo',
+    ]);
   });
 
   it('accepts an empty list', () => {
