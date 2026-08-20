@@ -17,6 +17,11 @@ Example of using [tiptap](https://github.com/ueberdosis/tiptap) as a Vue 3 compo
 npm install vue-tiptap
 ```
 
+Vue 3.5+ is a peer dependency, and TipTap comes along as a regular
+dependency — npm installs both for you. Nothing is bundled into
+`dist/`, so your app ends up with a single copy of Vue and of
+ProseMirror even if it uses TipTap directly elsewhere.
+
 The styles are not bundled into the component, so you also need
 [`sass`](https://www.npmjs.com/package/sass) in your project to compile
 them:

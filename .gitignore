@@ -2,7 +2,6 @@
 node_modules
 dist/
 dist-example/
-!dist-example/.gitkeep
 
 # local env files
 .env.local

@@ -39,14 +39,19 @@ export default defineConfig(({ mode }) => {
           fileName: 'vue-tiptap',
         },
         rollupOptions: {
-          // make sure to externalize deps that shouldn't be bundled
-          // into your library
-          external: ['vue'],
+          // Every runtime dependency is externalized, not bundled: they are
+          // all declared in package.json, so npm installs them alongside
+          // this package. Bundling them would ship the same code twice and
+          // risk a second ProseMirror instance in apps that use TipTap
+          // directly.
+          external: ['vue', '@tiptap/vue-3', '@tiptap/starter-kit'],
           output: {
             // Provide global variables to use in the UMD build
             // for externalized deps
             globals: {
               vue: 'Vue',
+              '@tiptap/vue-3': 'TiptapVue3',
+              '@tiptap/starter-kit': 'TiptapStarterKit',
             },
           },
         },
