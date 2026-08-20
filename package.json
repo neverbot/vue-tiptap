@@ -13,7 +13,7 @@
   "type": "module",
   "repository": {
     "type": "git",
-    "url": "https://github.com/neverbot/vue-tiptap"
+    "url": "git+https://github.com/neverbot/vue-tiptap.git"
   },
   "license": "MIT",
   "author": "neverbot <ivan@neverbot.com> (http://neverbot.com)",

@@ -7,7 +7,7 @@ const baseConfig = {
   plugins: [vue()],
   resolve: {
     alias: {
-      '@': path.resolve(__dirname, './src'),
+      '@': path.resolve(import.meta.dirname, './src'),
     },
   },
 };
@@ -20,7 +20,7 @@ export default defineConfig(({ mode }) => {
       build: {
         outDir: 'dist-example',
         rollupOptions: {
-          input: path.resolve(__dirname, 'index.html'),
+          input: path.resolve(import.meta.dirname, 'index.html'),
         },
       },
     };
@@ -33,7 +33,7 @@ export default defineConfig(({ mode }) => {
       build: {
         lib: {
           // src/index.js is where we have exported the component(s)
-          entry: path.resolve(__dirname, 'src/index.js'),
+          entry: path.resolve(import.meta.dirname, 'src/index.js'),
           name: 'VueTipTap',
           // the name of the output files when the build is run
           fileName: 'vue-tiptap',
