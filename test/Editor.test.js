@@ -208,14 +208,34 @@ describe('activeButtons validator', () => {
       'redo',
     ];
 
-    expect(validator(all)).toBeTruthy();
+    expect(validator(all)).toBe(true);
   });
 
   it('accepts an empty list', () => {
-    expect(validator([])).toBeTruthy();
+    expect(validator([])).toBe(true);
   });
 
-  // The validator returns -1 for an invalid entry, and -1 is truthy, so Vue
-  // reads the rejection as a pass and never warns. Enable once that is fixed.
-  it.todo('rejects an unknown action (blocked on the validator returning -1)');
+  it('rejects an unknown action', () => {
+    expect(validator(['bold', 'notAnAction'])).toBe(false);
+  });
+
+  it('rejects a list whose first entry is already unknown', () => {
+    expect(validator(['nope'])).toBe(false);
+  });
+
+  // Returning a truthy -1 was the actual bug: Vue reads the return value as
+  // a boolean, so the rejection branch used to report success and no warning
+  // ever reached the developer.
+  it('makes Vue warn about an invalid prop', () => {
+    const warn = vi.spyOn(console, 'warn').mockImplementation(() => {});
+
+    mountEditor({ activeButtons: ['bold', 'notAnAction'] });
+
+    const invalidPropWarnings = warn.mock.calls
+      .map((args) => args.join(' '))
+      .filter((line) => line.includes('Invalid prop'));
+    warn.mockRestore();
+
+    expect(invalidPropWarnings).toHaveLength(1);
+  });
 });

@@ -180,10 +180,10 @@ export default {
               'redo',
             ].indexOf(el) === -1
           ) {
-            return -1;
+            return false;
           }
         }
-        return 1;
+        return true;
       },
       default: () => ['bold', 'italic'],
     },
