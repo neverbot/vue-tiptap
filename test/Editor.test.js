@@ -150,6 +150,30 @@ describe('commands', () => {
   });
 });
 
+describe('extensions', () => {
+  it('registers no extension twice', () => {
+    const warn = vi.spyOn(console, 'warn').mockImplementation(() => {});
+
+    mountEditor();
+
+    const duplicates = warn.mock.calls
+      .map((args) => args.join(' '))
+      .filter((line) => line.includes('Duplicate extension names'));
+    warn.mockRestore();
+
+    expect(duplicates).toEqual([]);
+  });
+
+  it('provides underline without declaring it separately', () => {
+    const wrapper = mountEditor();
+    const names = wrapper.vm.editor.extensionManager.extensions.map(
+      (e) => e.name,
+    );
+
+    expect(names.filter((n) => n === 'underline')).toHaveLength(1);
+  });
+});
+
 describe('lifecycle', () => {
   it('destroys the editor on unmount', () => {
     const wrapper = mountEditor();

@@ -143,7 +143,6 @@
 import Icon from './Icon.vue';
 import { Editor, EditorContent } from '@tiptap/vue-3';
 import StarterKit from '@tiptap/starter-kit';
-import Underline from '@tiptap/extension-underline';
 
 export default {
   name: 'Editor',
@@ -200,7 +199,9 @@ export default {
   created() {
     this.editor = new Editor({
       content: this.initialContent,
-      extensions: [StarterKit, Underline],
+      // StarterKit already bundles Underline; listing it again would
+      // register the extension twice.
+      extensions: [StarterKit],
     });
 
     this.html = this.editor.getHTML();

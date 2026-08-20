@@ -45,7 +45,6 @@
   },
   "dependencies": {
     "@tiptap/core": "^3.30.2",
-    "@tiptap/extension-underline": "^3.30.2",
     "@tiptap/starter-kit": "^3.30.2",
     "@tiptap/vue-3": "^3.30.2",
     "vue": "^3.5.41"
