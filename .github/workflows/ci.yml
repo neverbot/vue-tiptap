@@ -31,6 +31,8 @@ jobs:
 
       - run: npm run lint
 
+      - run: npm test
+
       # The entry points live in dist/, which is not versioned. Reading
       # package.json is not enough to know they resolve — pack a real
       # tarball, install it, and import it the way a consumer would.
