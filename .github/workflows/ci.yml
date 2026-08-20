@@ -1,0 +1,68 @@
+name: ci
+
+on:
+  push:
+    branches: [master]
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+
+    strategy:
+      fail-fast: false
+      matrix:
+        node: ['22', '24']
+
+    steps:
+      - uses: actions/checkout@v7
+
+      - uses: actions/setup-node@v7
+        with:
+          node-version: ${{ matrix.node }}
+          cache: npm
+
+      # `prepare` runs vite build here, so this covers the library build too.
+      - run: npm ci
+
+      - run: npm run lint
+
+      # The entry points live in dist/, which is not versioned. Reading
+      # package.json is not enough to know they resolve — pack a real
+      # tarball, install it, and import it the way a consumer would.
+      - name: Verify the published package resolves
+        run: |
+          set -euo pipefail
+          # Don't capture npm pack's stdout: `prepare` runs the vite build
+          # first and its log would end up in the variable. Glob instead.
+          npm pack --pack-destination "$RUNNER_TEMP"
+          tarball="$(ls "$RUNNER_TEMP"/vue-tiptap-*.tgz)"
+          mkdir -p "$RUNNER_TEMP/smoke"
+          cd "$RUNNER_TEMP/smoke"
+          npm init -y > /dev/null
+          npm install --no-save "$tarball" vue
+          cat > check.mjs <<'EOF'
+          import { createRequire } from 'node:module';
+
+          const require = createRequire(import.meta.url);
+          const subpaths = [
+            'vue-tiptap/style',
+            'vue-tiptap/src/index.js',
+            'vue-tiptap/package.json',
+          ];
+
+          const { default: Editor } = await import('vue-tiptap');
+          if (Editor?.name !== 'Editor') {
+            throw new Error(`default export is not the Editor component: ${Editor?.name}`);
+          }
+
+          for (const subpath of subpaths) {
+            require.resolve(subpath);
+          }
+
+          console.log('package resolves: entry + %d subpaths', subpaths.length);
+          EOF
+          node check.mjs
