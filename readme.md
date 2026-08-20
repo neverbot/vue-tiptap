@@ -76,8 +76,11 @@ Accepted `activeButtons` values:
 ### Styles
 
 `vue-tiptap/style` is the whole stylesheet: a small reset, the editor
-content styles and the toolbar. Import it from JavaScript as above, or
-from your own Sass if you prefer to override the variables first.
+content styles and the toolbar. Import it from JavaScript as above.
+
+The colours live in `src/sass/variables.scss`, but they are not
+configurable from outside the package — override the generated CSS in
+your own stylesheet if you need to restyle.
 
 ## Development
 

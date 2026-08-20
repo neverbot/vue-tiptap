@@ -1,3 +1,5 @@
+@use "variables";
+
 .menubar {
 
   margin-bottom: 1rem;
@@ -22,18 +24,18 @@
     display: inline-flex;
     background: transparent;
     border: 0;
-    color: $color-black;
+    color: variables.$color-black;
     padding: 0.2rem 0.5rem;
     margin-right: 0.2rem;
     border-radius: 3px;
     cursor: pointer;
 
     &:hover {
-      background-color: rgba($color-black, 0.05);
+      background-color: rgba(variables.$color-black, 0.05);
     }
 
     &.is-active {
-      background-color: rgba($color-black, 0.1);
+      background-color: rgba(variables.$color-black, 0.1);
     }
   }
 

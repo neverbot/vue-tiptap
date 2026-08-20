@@ -1,3 +1,5 @@
+@use "variables";
+
 .editor {
   position: relative;
   max-width: 30rem;
@@ -16,8 +18,8 @@
     pre {
       padding: 0.7rem 1rem;
       border-radius: 5px;
-      background: $color-black;
-      color: $color-white;
+      background: variables.$color-black;
+      color: variables.$color-white;
       font-size: 0.8rem;
       overflow-x: auto;
 
@@ -31,8 +33,8 @@
       border-radius: 5px;
       font-size: 0.8rem;
       font-weight: bold;
-      background: rgba($color-black, 0.1);
-      color: rgba($color-black, 0.8);
+      background: rgba(variables.$color-black, 0.1);
+      color: rgba(variables.$color-black, 0.8);
     }
 
     ul,
@@ -51,8 +53,8 @@
     }
 
     blockquote {
-      border-left: 3px solid rgba($color-black, 0.1);
-      color: rgba($color-black, 0.8);
+      border-left: 3px solid rgba(variables.$color-black, 0.1);
+      color: rgba(variables.$color-black, 0.8);
       padding-left: 0.8rem;
       font-style: italic;
 
@@ -75,7 +77,7 @@
 
       td, th {
         min-width: 1em;
-        border: 2px solid $color-grey;
+        border: 2px solid variables.$color-grey;
         padding: 3px 5px;
         vertical-align: top;
         box-sizing: border-box;

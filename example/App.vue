@@ -65,8 +65,8 @@ export default {
 };
 </script>
 
-<style lang="sass">
-@import '../src/sass/main.scss'
+<style lang="scss">
+@use '../src/sass/main.scss';
 </style>
 
 <style lang="css">
