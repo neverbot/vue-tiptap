@@ -38,6 +38,7 @@
     "dev": "npx vite build --mode development && npx vite preview --outDir dist-example --port 5173",
     "lint": "npx eslint .",
     "lint:fix": "npx eslint --fix .",
+    "prepare": "npm run build",
     "serve": "npm run dev",
     "test": "echo \"Error: no tests\" && exit 1"
   },
