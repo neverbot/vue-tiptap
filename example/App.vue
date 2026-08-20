@@ -53,9 +53,6 @@ export default {
   components: {
     Editor,
   },
-  created() {
-    document.title = 'vue-tiptap example';
-  },
   methods: {
     test(something) {
       // eslint-disable-next-line no-console
